@@ -1,0 +1,163 @@
+
+D:\project\physical-edu\physical-edu>conda env list
+# conda environments:
+#
+base                  *  C:\Users\mani\anaconda3
+physical-edu             C:\Users\mani\anaconda3\envs\physical-edu
+
+
+D:\project\physical-edu\physical-edu>conda activate ./physical-edu
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda
+activate'.
+If using 'conda activate' from a batch script, change your
+invocation to 'CALL conda.bat activate'.
+
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - cmd.exe
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda ini
+t'.
+
+
+
+D:\project\physical-edu\physical-edu>conda env list
+# conda environments:
+#
+base                  *  C:\Users\mani\anaconda3
+physical-edu             C:\Users\mani\anaconda3\envs\physical-edu
+
+
+D:\project\physical-edu\physical-edu>conda activate C:\Users\mani\anaconda3\envs
+\physical-edu
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda
+activate'.
+If using 'conda activate' from a batch script, change your
+invocation to 'CALL conda.bat activate'.
+
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - cmd.exe
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda ini
+t'.
+
+
+
+D:\project\physical-edu\physical-edu>ativate physical-edu
+'ativate' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\project\physical-edu\physical-edu>activate physical-edu
+
+(physical-edu) D:\project\physical-edu\physical-edu>pip install -r requirement.t
+xt
+
+(physical-edu) D:\project\physical-edu\physical-edu>pip install flask pandas
+Collecting flask
+  Downloading Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 94 kB 272 kB/s
+Collecting click>=5.1
+  Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 82 kB 58 kB/s
+Collecting itsdangerous>=0.24
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Jinja2>=2.10.1
+  Downloading Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 125 kB 9.5 kB/s
+Collecting MarkupSafe>=0.23
+  Downloading MarkupSafe-1.1.1-cp38-cp38-win_amd64.whl (16 kB)
+Collecting Werkzeug>=0.15
+  Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 298 kB 15 kB/s
+Collecting pandas
+  Downloading pandas-1.2.1-cp38-cp38-win_amd64.whl (9.3 MB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 9.3 MB 36 kB/s
+Collecting numpy>=1.16.5
+  Downloading numpy-1.19.5-cp38-cp38-win_amd64.whl (13.3 MB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 13.3 MB 47 kB/s
+Collecting python-dateutil>=2.7.3
+  Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 227 kB 38 kB/s
+Collecting pytz>=2017.3
+  Downloading pytz-2020.5-py2.py3-none-any.whl (510 kB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 510 kB 9.0 kB/s
+Collecting six>=1.5
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+Installing collected packages: six, MarkupSafe, Werkzeug, pytz, python-dateutil,
+ numpy, Jinja2, itsdangerous, click, pandas, flask
+Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1 Werkzeug-1.0.1 click-7.1.2
+ flask-1.1.2 itsdangerous-1.1.0 numpy-1.19.5 pandas-1.2.1 python-dateutil-2.8.1
+pytz-2020.5 six-1.15.0
+
+(physical-edu) D:\project\physical-edu\physical-edu>conda list -e > requirements
+.txt
+
+(physical-edu) D:\project\physical-edu\physical-edu>python app.py
+  File "app.py", line 20
+    return render_template('sample.html)
+                                       ^
+SyntaxError: EOL while scanning string literal
+
+(physical-edu) D:\project\physical-edu\physical-edu>python app.py
+Traceback (most recent call last):
+  File "app.py", line 8, in <module>
+    from SQLConnector import SqlOperation
+  File "D:\project\physical-edu\physical-edu\SQLConnector.py", line 9, in <modul
+e>
+    import pyodbc
+ModuleNotFoundError: No module named 'pyodbc'
+
+(physical-edu) D:\project\physical-edu\physical-edu>pip install pyodbc
+Collecting pyodbc
+  Downloading pyodbc-4.0.30-cp38-cp38-win_amd64.whl (68 kB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 68 kB 145 kB/s
+Installing collected packages: pyodbc
+Successfully installed pyodbc-4.0.30
+
+(physical-edu) D:\project\physical-edu\physical-edu>python app.py
+Traceback (most recent call last):
+  File "app.py", line 8, in <module>
+    from SQLConnector import SqlOperation
+  File "D:\project\physical-edu\physical-edu\SQLConnector.py", line 12, in <modu
+le>
+    import Logger as Log
+ModuleNotFoundError: No module named 'Logger'
+
+(physical-edu) D:\project\physical-edu\physical-edu>python app.py
+Traceback (most recent call last):
+  File "app.py", line 8, in <module>
+    from SQLConnector import SqlOperation
+  File "D:\project\physical-edu\physical-edu\SQLConnector.py", line 12, in <modu
+le>
+    import Logger as Log
+  File "D:\project\physical-edu\physical-edu\Logger.py", line 7
+    except Exception as ex:
+                          ^
+IndentationError: unindent does not match any outer indentation level
+
+(physical-edu) 	>

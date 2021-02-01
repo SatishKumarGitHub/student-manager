@@ -1,0 +1,56 @@
+
+*****************************************************************************
+T0 download Source code:
+Install Git-svm
+
+
+EX: D:\project\physical-edu\physical-edu
+
+Right click on Explorer
+->Git Bash
+on  the console window
+git clone <https://github.com/MaheshKanthaswamy/physical-edu.git>
+*****************************************************************************
+
+
+Install Anaconda - for server/system
+Path where Anaconda is installed
+C:\Users\mani\anaconda3\
+
+Add Anaconda Scripts path into Env Variable.
+C:\Users\mani\anaconda3\Scripts
+
+Start->Env->System variables
+
+Add new system variable
+ANACONDA->C:\Users\mani\anaconda3\Scripts
+Add %ANACONDA% to Path Variable
+
+Start->Run->cmd
+ Navigate inside folder where u have the source code downloaded
+
+
+EX: D:\project\physical-edu\physical-edu
+
+
+Activate Python:
+
+Start ->conda Command Prompt
+Navigate to folder <D:\project\physical-edu\physical-edu>
+
+conda init
+conda create --name <physical-edu>
+activate <physical-edu>
+
+Thenyour teminal become:
+(physical-edu) D:\project\physical-edu\physical-edu>pip install -r requirement.txt
+
+
+
+*****************************************************************************
+
+
+
+
+
+
