@@ -1,0 +1,19 @@
+.form-control.goal-input
+{
+    width: 60px;
+}
+
+.text-align-center
+{
+    text-align: center;
+}
+
+.text-align-right
+{
+    text-align: right;
+}
+
+table
+{
+    table-layout: fixed;
+}
