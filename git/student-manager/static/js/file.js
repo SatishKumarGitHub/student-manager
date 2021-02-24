@@ -1,15 +1,11 @@
-$(document).ready
-(
-    function ()
-    {
-        var navbar = $(".navbar-nav")
+$(document).ready(
+    function() {
+        var navbar = $(".navbar-nav-league")
         var li
         li = $("<li></li>").appendTo(navbar)
         var newLink = $("<a href=\"#\">" + language["New"] + "</a>").appendTo(li)
-        newLink.click
-        (
-            function ()
-            {
+        newLink.click(
+            function() {
                 $("#matchdays").empty()
                 $("#content").empty()
                 var row, column
@@ -24,10 +20,8 @@ $(document).ready
                 $(document.createTextNode(" ")).appendTo(formGroup)
                 rounds = 2
                 var roundsInput = $("<input class=\"form-control\" id=\"rounds\" min=\"1\" type=\"number\" value=\"2\" />").appendTo(formGroup)
-                roundsInput.change
-                (
-                    function (event)
-                    {
+                roundsInput.change(
+                    function(event) {
                         rounds = parseInt($(event.target).val())
                     }
                 )
@@ -35,19 +29,17 @@ $(document).ready
                 column = $("<div class=\"col-md-6\"></div>").appendTo(row)
                 $("<h2>" + language["Teams"] + "</h2>").appendTo(column)
                 var teamsInput = $("<div id=\"teams\"></div>").appendTo(column)
-                teamsInput.arrayControl({array: teams})
+                teamsInput.arrayControl({ array: teams })
                 statistics = []
-                points = {win: 3, draw: 1, loss: 0}
+                points = { win: 3, draw: 1, loss: 0 }
                 criteria = []
                 headToHeadCriteria = []
                 displaySettings()
                 row = $("<div class=\"row\"></div>").appendTo("#content")
                 column = $("<div class=\"col-md-12\"></div>").appendTo(row)
                 var generateButton = $("<button class=\"btn btn-primary\">" + language["Generate league schedule"] + "</button>").appendTo(column)
-                generateButton.click
-                (
-                    function ()
-                    {
+                generateButton.click(
+                    function() {
                         generateMatches()
                         displayMatchdayMenu()
                     }
@@ -58,10 +50,8 @@ $(document).ready
 
         li = $("<li></li>").appendTo(navbar)
         var openLink = $("<a href=\"#\">" + language["Open"] + "</a>").appendTo(li)
-        openLink.click
-        (
-            function ()
-            {
+        openLink.click(
+            function() {
                 $("#matchdays").empty()
                 $("#content").empty()
                 var row, column
@@ -74,14 +64,11 @@ $(document).ready
                 $("<input class=\"form-control\" id=\"file\" type=\"file\" />").appendTo(formInline)
                 $(document.createTextNode(" ")).appendTo(formInline)
                 var openButton = $("<button class=\"btn btn-primary\">" + language["Open league schedule"] + "</button>").appendTo(formInline)
-                openButton.click
-                (
-                    function ()
-                    {
+                openButton.click(
+                    function() {
                         var file = document.getElementById("file").files[0]
                         var reader = new FileReader()
-                        reader.onload = function ()
-                        {
+                        reader.onload = function() {
                             var data = reader.result
                             data = JSON.parse(decodeURIComponent(data))
                             teams = data.teams
@@ -101,20 +88,15 @@ $(document).ready
 
         li = $("<li></li>").appendTo(navbar)
         var saveLink = $("<a download=\"schedule.json\" href=\"#\">" + language["Save"] + "</a>").appendTo(li)
-        saveLink.click
-        (
-            function (event)
-            {
-                try
-                {
-                    var data = {teams: teams, matches: matches, criteria: criteria, headToHeadCriteria: headToHeadCriteria, statistics: statistics, points: points}
+        saveLink.click(
+            function(event) {
+                try {
+                    var data = { teams: teams, matches: matches, criteria: criteria, headToHeadCriteria: headToHeadCriteria, statistics: statistics, points: points }
                     data = JSON.stringify(data)
                     data = "data:application/json," + encodeURIComponent(data)
                     $(event.target).attr("href", data)
                     return true
-                }
-                catch (exception)
-                {
+                } catch (exception) {
                     return false
                 }
             }

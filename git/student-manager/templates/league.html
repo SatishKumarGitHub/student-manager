@@ -1,45 +1,42 @@
-{% extends "layout.html" %}
-{% block page_title %}League-Schedule-Manager{% endblock %}
-{% block body %}
-    {{ super() }}
+{% extends "layout.html" %} {% block page_title %}League-Schedule-Manager{% endblock %} {% block body %} {{ super() }}
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatile" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="lib/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="src/css/style.css" rel="stylesheet" 
-        href="{{ url_for('static', filename='css/style.css') }}"/>
-        <title>League Schedule Manager</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <ul class="nav navbar-nav"></ul>
-            </div>
-        </nav>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatile" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="lib/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="src/css/style.css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script src="{{ url_for('static', filename='js/file.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/language.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/leagueschedulemanager.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/match.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/table.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <title>League Schedule Manager</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12" id="intro"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" id="matchdays"></div>
-            </div>
+            <ul class="nav navbar-nav-league"></ul>
         </div>
-        <div class="container" id="content"></div>
-        <script src="lib/jquery/jquery-1.11.3.min.js"></script>
-        <script src="lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-        <script src="src/js/leagueschedulemanager.js"></script>
-        <script src="src/js/array.js"></script>
-        <script src="src/js/file.js"></script>
-        <script src="src/js/language.js"></script>
-        <script src="src/js/match.js"></script>
-        <script src="src/js/table.js"></script>
-        <script src="src/js/util.js"></script>
-        
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="intro"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="matchdays"></div>
+        </div>
+    </div>
+    <div class="container" id="content"></div>
 
 
-    </body>
+
+
+</body>
+
 </html>
-{% endblock %}  
+{% endblock %}
